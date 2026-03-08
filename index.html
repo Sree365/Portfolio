@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Srijita Mukherjee — Java Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- FIX 3: Roundish & classy fonts — completely different from Gopi's Syne+DM Sans -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Three.js canvas sits behind everything -->
+  <canvas id="threeCanvas"></canvas>
+
+  <!-- ── MOBILE MENU ─────────────────────────────────────── -->
+  <ul class="mobile-menu" id="mobileMenu">
+    <li><a href="#about" onclick="closeMenu()">About</a></li>
+    <li><a href="#skills" onclick="closeMenu()">Skills</a></li>
+    <li><a href="#projects" onclick="closeMenu()">Projects</a></li>
+    <li><a href="#certifications" onclick="closeMenu()">Certifications</a></li>
+    <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
+  </ul>
+
+  <!-- ── NAVBAR ──────────────────────────────────────────── -->
+  <nav id="navbar">
+    <a href="#hero" class="nav-brand">&lt; <span>Srijita</span>.java /&gt;</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="/cdn-cgi/l/email-protection#7506071c1f1c011418001e1d10071f1010414d434c351218141c195b161a184a0600171f101601483d1c071c1b12553c1b04001c070c"
+      class="nav-hire">Hire Me</a>
+    <button class="nav-toggle" id="navToggle" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ── HERO ────────────────────────────────────────────── -->
+  <section id="hero">
+    <div class="hero-inner">
+      <div class="hero-eyebrow fade-in">
+        <span class="status-dot"></span>
+        Available for Work · MCA Graduate 2025
+      </div>
+      <h1 class="hero-name fade-in d1">
+        <span class="first">Srijita</span><br />
+        <span class="last">Mukherjee</span>
+      </h1>
+      <p class="hero-role fade-in d2">
+        <strong>Java &amp; Spring Boot Developer</strong> · Full-Stack &amp; ML Applications
+      </p>
+      <p class="hero-sub fade-in d2">Building scalable backends and intelligent systems · Ghatal, West Bengal</p>
+      <div class="hero-tags fade-in d3">
+        <span class="htag p1">☕ Java</span>
+        <span class="htag p2">Spring Boot</span>
+        <span class="htag p2">REST API</span>
+        <span class="htag">Python</span>
+        <span class="htag">OpenCV</span>
+        <span class="htag">Machine Learning</span>
+        <span class="htag">MySQL · PostgreSQL</span>
+      </div>
+      <div class="hero-btns fade-in d4">
+        <a href="#projects" class="btn-pri">View My Work →</a>
+        <a href="#contact" class="btn-sec">Get In Touch</a>
+      </div>
+    </div>
+    <div class="scroll-hint">
+      <svg width="14" height="22" viewBox="0 0 14 22" fill="none">
+        <rect x=".75" y=".75" width="12.5" height="20.5" rx="6.25" stroke="currentColor" stroke-width="1.5" />
+        <circle cx="7" cy="6.5" r="1.75" fill="currentColor" />
+      </svg>
+      SCROLL
+    </div>
+  </section>
+
+  <!-- ── ABOUT ───────────────────────────────────────────── -->
+  <section id="about">
+    <div class="section-inner">
+      <p class="s-tag fade-in">01 — About</p>
+      <h2 class="s-title fade-in d1">Who I <em>Am</em></h2>
+      <div class="about-grid" style="margin-top:40px">
+        <div>
+          <div class="about-bio fade-in d2">
+            <p>I am an <strong>MCA graduate from MAKAUT</strong> with a strong foundation in <strong>Java and Spring
+                Boot</strong> for backend development, paired with hands-on experience in building ML-powered
+              applications using Python and Computer Vision.</p>
+            <p>I enjoy working across the full stack — architecting robust <strong>REST APIs</strong>, designing clean
+              frontends, and integrating intelligent models into real-world systems. My work reflects a genuine interest
+              in <strong>AI-driven problem solving</strong>.</p>
+            <p>I'm looking for a <strong>software development role</strong> where I can build scalable, user-centric
+              products while growing within a collaborative team.</p>
+          </div>
+          <!-- FIX 1: Education timeline with distinct dot styles -->
+          <div class="edu-timeline fade-in d3">
+            <div class="edu-item">
+              <div class="edu-dot mca"></div>
+              <div>
+                <div class="edu-degree">Master of Computer Application (MCA)</div>
+                <div class="edu-school">Maulana Abul Kalam Azad University of Technology</div>
+                <div class="edu-year">July 2025 · CGPA 7.24</div>
+              </div>
+            </div>
+            <div class="edu-item">
+              <div class="edu-dot bca"></div>
+              <div>
+                <div class="edu-degree">Bachelor of Computer Application (BCA)</div>
+                <div class="edu-school">Vidyasagar University</div>
+                <div class="edu-year">July 2023 · 76%</div>
+              </div>
+            </div>
+            <div class="edu-item">
+              <div class="edu-dot hs"></div>
+              <div>
+                <div class="edu-degree">Higher Secondary (12th)</div>
+                <div class="edu-school">West Bengal Council of Higher Secondary Education</div>
+                <div class="edu-year">Feb 2020 · 82%</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="info-cards fade-in d3">
+          <div class="info-card">
+            <div class="info-icon">📍</div>
+            <div>
+              <div class="info-lbl">Location</div>
+              <div class="info-val">Ghatal, West Bengal</div>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="info-icon">🎓</div>
+            <div>
+              <div class="info-lbl">Qualification</div>
+              <div class="info-val">Masters — MCA (2025)</div>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="info-icon">📧</div>
+            <div>
+              <div class="info-lbl">Email</div>
+              <div class="info-val" style="font-size:.82rem">srijitamukherjee4869@gmail.com</div>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="info-icon">🌐</div>
+            <div>
+              <div class="info-lbl">Languages</div>
+              <div class="info-val">English · Hindi · Bengali</div>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="info-icon">💻</div>
+            <div>
+              <div class="info-lbl">GitHub</div>
+              <div class="info-val"><a href="https://github.com/Sree365" target="_blank"
+                  style="color:var(--amber);text-decoration:none">github.com/Sree365</a></div>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="info-icon">🔗</div>
+            <div>
+              <div class="info-lbl">LinkedIn</div>
+              <div class="info-val" style="font-size:.82rem"><a
+                  href="https://www.linkedin.com/in/srijita-mukherjee-70358b290/" target="_blank"
+                  style="color:var(--amber);text-decoration:none">linkedin.com/in/srijita-mukherjee</a></div>
+            </div>
+          </div>
+          <div class="info-card"
+            style="background:linear-gradient(135deg,rgba(245,158,11,.1),rgba(249,115,22,.06));border-color:rgba(245,158,11,.4)">
+            <div class="info-icon">🟢</div>
+            <div>
+              <div class="info-lbl">Status</div>
+              <div class="info-val" style="color:var(--amber);font-weight:700">Open to Work</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SKILLS ───────────────────────────────────────────── -->
+  <section id="skills" style="background:linear-gradient(180deg,transparent,rgba(245,158,11,.02),transparent)">
+    <div class="section-inner">
+      <p class="s-tag fade-in">02 — Skills</p>
+      <h2 class="s-title fade-in d1">Tech <em>Stack</em></h2>
+      <div class="skills-grid">
+        <div class="glass skill-card fade-in d1">
+          <div class="skill-icon">☕</div>
+          <div class="skill-title">Java & Backend</div>
+          <div class="skill-list">
+            <div class="ski hi">Java (Core Focus)</div>
+            <div class="ski hi">Spring Boot</div>
+            <div class="ski hi">REST API Design</div>
+            <div class="ski">Microservices</div>
+            <div class="ski">MySQL · PostgreSQL</div>
+            <div class="ski">Agile / SDLC</div>
+            <div class="ski">Git · Jira · Bitbucket</div>
+          </div>
+        </div>
+        <div class="glass skill-card fade-in d2">
+          <div class="skill-icon">🌐</div>
+          <div class="skill-title">Full-Stack & Tools</div>
+          <div class="skill-list">
+            <div class="ski hi">Python</div>
+            <div class="ski">HTML5 · CSS3</div>
+            <div class="ski">JavaScript</div>
+            <div class="ski">C</div>
+            <div class="ski">Data Structures</div>
+            <div class="ski">Database Handling</div>
+            <div class="ski">GitHub · Bitbucket</div>
+          </div>
+        </div>
+        <div class="glass skill-card fade-in d3">
+          <div class="skill-icon">🤖</div>
+          <div class="skill-title">AI & Computer Vision</div>
+          <div class="skill-list">
+            <div class="ski hi">OpenCV</div>
+            <div class="ski hi">MTCNN · FaceNet</div>
+            <div class="ski">MediaPipe</div>
+            <div class="ski">Machine Learning</div>
+            <div class="ski">Data Science</div>
+            <div class="ski">PyAutoGUI</div>
+            <div class="ski">Image Processing</div>
+          </div>
+        </div>
+      </div>
+      <div class="java-banner fade-in d4">
+        <div class="jb-icon">☕</div>
+        <div>
+          <div class="jb-title">Primary Expertise — Java & Spring Boot</div>
+          <div class="jb-desc">Building scalable REST APIs and backend services with clean architecture, database
+            integration, and enterprise-grade design patterns.</div>
+        </div>
+        <div class="jb-tags">
+          <span class="jbt">OOP</span>
+          <span class="jbt">Spring MVC</span>
+          <span class="jbt">REST APIs</span>
+          <span class="jbt">JPA / Hibernate</span>
+          <span class="jbt">Microservices</span>
+          <span class="jbt">Git Flow</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PROJECTS ─────────────────────────────────────────── -->
+  <section id="projects">
+    <div class="section-inner">
+      <p class="s-tag fade-in">03 — Projects</p>
+      <h2 class="s-title fade-in d1">Things I've <em>Built</em></h2>
+
+      <div class="slider-outer fade-in d2">
+
+        <!-- Track -->
+        <div class="slider-track-wrap" id="sliderWrap">
+          <div class="slider-track" id="sliderTrack">
+
+            <!-- Slide 1 -->
+            <div class="proj-card">
+              <div class="proj-img-wrap">
+                <span class="proj-img-badge">01 / 05</span>
+                <img class="proj-img" src="assets/1.png" alt="Face Recognition" loading="lazy" />
+              </div>
+              <div class="proj-body">
+                <div class="proj-cat">Academic · Computer Vision</div>
+                <div class="proj-title">Smart Attendance System Using Face Recognition</div>
+                <div class="proj-divider"></div>
+                <div class="proj-desc">
+                  <strong>Problem:</strong> Manual attendance is slow and vulnerable to proxy fraud.<br /><br />
+                  <strong>Solution:</strong> Real-time facial recognition pipeline using MTCNN + FaceNet with MySQL and
+                  a Python GUI — automating attendance with duplicate prevention and high accuracy.
+                </div>
+                <div class="proj-tags">
+                  <span class="ptag">Python</span><span class="ptag">OpenCV</span>
+                  <span class="ptag">MTCNN</span><span class="ptag">FaceNet</span>
+                  <span class="ptag">MySQL</span><span class="ptag">Tkinter</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="proj-card">
+              <div class="proj-img-wrap">
+                <span class="proj-img-badge">02 / 05</span>
+                <img class="proj-img" src="assets/2.png" alt="Heart Disease" loading="lazy" />
+              </div>
+              <div class="proj-body">
+                <div class="proj-cat">Academic · Machine Learning</div>
+                <div class="proj-title">Heart Disease Prediction Using Machine Learning</div>
+                <div class="proj-divider"></div>
+                <div class="proj-desc">
+                  <strong>Problem:</strong> Early heart disease detection is critical but often relies on manual
+                  clinical intuition.<br /><br />
+                  <strong>Solution:</strong> ML-powered web app that predicts heart disease risk from patient data with
+                  a clean pre-processing pipeline and real-time risk scoring via Flask.
+                </div>
+                <div class="proj-tags">
+                  <span class="ptag">Python</span><span class="ptag">Machine Learning</span>
+                  <span class="ptag">Flask</span><span class="ptag">Pandas</span><span class="ptag">Data Science</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="proj-card">
+              <div class="proj-img-wrap">
+                <span class="proj-img-badge">03 / 05</span>
+                <img class="proj-img" src="assets/3.png" alt="Fruit Classifier" loading="lazy" />
+              </div>
+              <div class="proj-body">
+                <div class="proj-cat">ML Project · Image Classification</div>
+                <div class="proj-title">Fruit & Vegetable Image Classification</div>
+                <div class="proj-divider"></div>
+                <div class="proj-desc">
+                  <strong>Problem:</strong> Manually identifying produce categories is error-prone in automated food
+                  systems.<br /><br />
+                  <strong>Solution:</strong> Deep learning CNN model trained on a multi-class dataset to accurately
+                  classify fruits and vegetables from image input.
+                </div>
+                <div class="proj-tags">
+                  <span class="ptag">Python</span><span class="ptag">CNN</span>
+                  <span class="ptag">Machine Learning</span><span class="ptag">Image Processing</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="proj-card">
+              <div class="proj-img-wrap">
+                <span class="proj-img-badge">04 / 05</span>
+                <img class="proj-img" src="assets/4.png" alt="Hand Gesture" loading="lazy" />
+              </div>
+              <div class="proj-body">
+                <div class="proj-cat">Computer Vision · Accessibility</div>
+                <div class="proj-title">Real-Time Hand Gesture Mouse Control</div>
+                <div class="proj-divider"></div>
+                <div class="proj-desc">
+                  <strong>Problem:</strong> Traditional mice limit accessibility and require physical
+                  contact.<br /><br />
+                  <strong>Solution:</strong> Contactless mouse control using MediaPipe hand tracking — move cursor with
+                  index finger and click via gesture. Built for accessibility and presentations.
+                </div>
+                <div class="proj-tags">
+                  <span class="ptag">Python</span><span class="ptag">OpenCV</span>
+                  <span class="ptag">MediaPipe</span><span class="ptag">PyAutoGUI</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 5 -->
+            <div class="proj-card">
+              <div class="proj-img-wrap">
+                <span class="proj-img-badge">05 / 05</span>
+                <img class="proj-img" src="assets/5.png" alt="Eye Tracking" loading="lazy" />
+              </div>
+              <div class="proj-body">
+                <div class="proj-cat">Computer Vision · Accessibility</div>
+                <div class="proj-title">Real-Time Eye Gesture Mouse Control</div>
+                <div class="proj-divider"></div>
+                <div class="proj-desc">
+                  <strong>Problem:</strong> Users with motor disabilities face significant barriers with conventional
+                  input devices.<br /><br />
+                  <strong>Solution:</strong> Eye-tracking system using MediaPipe to control the cursor and simulate
+                  clicks through eye gestures — a step toward true hands-free computing.
+                </div>
+                <div class="proj-tags">
+                  <span class="ptag">Python</span><span class="ptag">OpenCV</span>
+                  <span class="ptag">MediaPipe</span><span class="ptag">PyAutoGUI</span>
+                </div>
+              </div>
+            </div>
+
+          </div><!-- /slider-track -->
+        </div><!-- /slider-track-wrap -->
+
+        <!-- Controls row -->
+        <div class="slider-controls">
+          <div class="slider-dots" id="sliderDots"></div>
+          <div class="slider-counter">
+            Slide <span id="cCur">1</span> of <span id="cTot">5</span>
+          </div>
+          <div class="slider-arrows">
+            <button class="sarrow" id="sarrowPrev" aria-label="Previous">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="15 18 9 12 15 6" />
+              </svg>
+            </button>
+            <button class="sarrow" id="sarrowNext" aria-label="Next">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="9 18 15 12 9 6" />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+      </div><!-- /slider-outer -->
+    </div>
+  </section>
+
+  <!-- ── CERTIFICATIONS ───────────────────────────────────── -->
+  <section id="certifications" style="background:linear-gradient(180deg,transparent,rgba(249,115,22,.02),transparent)">
+    <div class="section-inner">
+      <p class="s-tag fade-in">04 — Credentials</p>
+      <h2 class="s-title fade-in d1">Certifications & <em>Experience</em></h2>
+      <div class="certs-grid">
+        <div class="glass cert-card fade-in d1">
+          <div class="cert-ico">🏆</div>
+          <div>
+            <div class="cert-prov">NPTEL · IIT</div>
+            <div class="cert-ttl">Privacy and Security in Online Social Media</div>
+            <div class="cert-meta">12-Week Course · April 2025 · Score: 57%</div>
+            <a href="https://drive.google.com/file/d/1DY2hcF0ikmoCehzGY5o_RuSKGnpfNKqh/view?usp=drivesdk"
+              target="_blank" class="cert-link">View Certificate →</a>
+          </div>
+        </div>
+        <div class="glass cert-card fade-in d2">
+          <div class="cert-ico">💼</div>
+          <div>
+            <div class="cert-prov">Codveda · Internship</div>
+            <div class="cert-ttl">Full Stack Development Internship</div>
+            <div class="cert-meta">Hands-on experience across frontend and backend technologies</div>
+            <a href="https://drive.google.com/file/d/1FZzmJkpTzFsIA2r_CByzyLwDZqMtAtPH/view?usp=sharing" target="_blank"
+              class="cert-link">View Certificate →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CONTACT ──────────────────────────────────────────── -->
+  <section id="contact">
+    <div class="section-inner">
+      <p class="s-tag fade-in">05 — Contact</p>
+      <h2 class="s-title fade-in d1">Let's <em>Connect</em></h2>
+      <p class="fade-in d2"
+        style="color:var(--muted);margin-bottom:46px;font-size:1rem;max-width:480px;line-height:1.7">
+        Open to opportunities, collaborations, and conversations. Whether you have a job opening or just want to talk
+        tech — my inbox is open.
+      </p>
+      <div class="contact-grid">
+        <div class="contact-cards fade-in d2">
+          <a href="/cdn-cgi/l/email-protection#0774756e6d6e73666a726c6f62756d6262333f313e47606a666e6b2964686a"
+            class="ccard">
+            <div class="ccard-ico">📧</div>
+            <div>
+              <div class="ccard-lbl">Email</div>
+              <div class="ccard-val"><span class="__cf_email__"
+                  data-cfemail="3b48495251524f5a564e50535e49515e5e0f030d027b5c565a525715585456">srijitamukherjee4869@gmail.com</span>
+              </div>
+            </div>
+          </a>
+          <a href="https://www.linkedin.com/in/srijita-mukherjee-70358b290/" target="_blank" class="ccard">
+            <div class="ccard-ico">🔗</div>
+            <div>
+              <div class="ccard-lbl">LinkedIn</div>
+              <div class="ccard-val">linkedin.com/in/srijita-mukherjee</div>
+            </div>
+          </a>
+          <a href="https://github.com/Sree365" target="_blank" class="ccard">
+            <div class="ccard-ico">🐙</div>
+            <div>
+              <div class="ccard-lbl">GitHub</div>
+              <div class="ccard-val">github.com/Sree365</div>
+            </div>
+          </a>
+          <div class="ccard" style="cursor:default">
+            <div class="ccard-ico">📍</div>
+            <div>
+              <div class="ccard-lbl">Location</div>
+              <div class="ccard-val">Ghatal, West Bengal, India</div>
+            </div>
+          </div>
+        </div>
+        <div class="fade-in d3">
+          <div class="form-grp"><label class="form-lbl">Your Name</label><input type="text" class="form-inp"
+              placeholder="John Doe" /></div>
+          <div class="form-grp"><label class="form-lbl">Email Address</label><input type="email" class="form-inp"
+              placeholder="john@company.com" /></div>
+          <div class="form-grp"><label class="form-lbl">Message</label><textarea class="form-ta"
+              placeholder="Hi Srijita, I saw your portfolio and..."></textarea></div>
+          <button class="form-btn" onclick="handleSubmit(this)">Send Message ✦</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ───────────────────────────────────────────── -->
+  <footer>
+    <div class="foot-brand">&lt; Srijita.java /&gt;</div>
+    <div class="foot-copy">© 2025 Srijita Mukherjee · Built with ☕ &amp; Claude</div>
+    <div class="foot-links">
+      <a href="https://github.com/Sree365" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/srijita-mukherjee-70358b290/" target="_blank">LinkedIn</a>
+      <a href="/cdn-cgi/l/email-protection#9be8e9f2f1f2effaf6eef0f3fee9f1fefeafa3ada2dbfcf6faf2f7b5f8f4f6">Email</a>
+    </div>
+  </footer>
+
+  <!-- ── THREE.JS ─────────────────────────────────────────── -->
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+</body>
+<script src="script.js"></script>
+
+</html>
